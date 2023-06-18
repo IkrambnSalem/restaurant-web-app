@@ -1,0 +1,30 @@
+<section class="regervation_part section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form #blogForm="ngForm" (ngSubmit)="addBlogs()">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" name="name" ([ngModel])="blog.name" id="inputEmail4" placeholder="name">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="date" class="form-control" name="date" ([ngModel])="blog.date" id="inputEmail4" placeholder="date">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" name="description" ([ngModel])="blog.description"  id="inputPassword4" placeholder="description">
+                                    
+                            </div>
+                        </div>
+
+                        <div class="regerv_btn">
+                            <input type="submit" class="btn_4" value="Add Plats">
+                          <!-- <button type="submit" class="btn_4">Add Plats </button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

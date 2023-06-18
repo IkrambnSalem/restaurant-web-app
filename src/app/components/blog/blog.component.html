@@ -1,0 +1,17 @@
+
+<section class="blog_item_section blog_section section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <p>Recent News</p>
+                    <h2>Latest From Blog</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngFor="let elt of blog" class="col-sm-12 col-lg-12">
+            
+        <app-article [X]="elt"></app-article>
+        </div>
+    </div>
+</section>

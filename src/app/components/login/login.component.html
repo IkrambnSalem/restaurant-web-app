@@ -1,0 +1,47 @@
+<section class="regervation_part section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form [formGroup]="loginForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="email" class="form-control" formControlName="email" id="inputEmail4"
+                                    placeholder="Email adress *">
+                            </div>
+                            <div
+                                *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].touched || loginForm.controls['email'].dirty)">
+                                <div *ngIf="loginForm.controls['email'].errors.required" style="color: red;">
+                                    email is required
+                                </div>
+                                <div *ngIf="loginForm.controls['email'].errors.email" style="color: red;">
+                                    email is invalid
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="password" formControlName="pwd" class="form-control" id="inputPassword4"
+                                    placeholder="Your password *">
+                            </div >
+                            <div *ngIf="loginForm.controls['pwd'].invalid && (loginForm.controls['pwd'].touched || loginForm.controls['pwd'].dirty)">
+                            <div *ngIf="loginForm.controls['pwd'].errors.minlength" style="color: red;">
+                                password must have at least 6 chars
+                            </div>
+                            <div *ngIf="loginForm.controls['pwd'].errors.maxlength" style="color: red;">
+                                password must have at most 12 chars
+                            </div>
+                            <div *ngIf="loginForm.controls['pwd'].errors.required" style="color: red;">
+                                password is required
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="regerv_btn">
+                            <input type="submit" (click)="login()" class="btn_4" value="Login">
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
